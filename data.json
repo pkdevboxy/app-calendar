@@ -1,0 +1,15 @@
+{
+	"table": [
+        {
+            "name": "Events",
+            "record": [
+                {
+                    "title":"Sample Event loaded","date":"1/10/2013","type":"success","desc":"My first sample event."
+                },
+                {
+                    "title":"Another Sample Event","date":"1/22/2013","type":"success","desc":"My second sample event."
+                }
+            ]
+        }
+    ]
+}

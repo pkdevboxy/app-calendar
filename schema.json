@@ -1,0 +1,37 @@
+{
+	"table": [
+        {
+            "name": "Events",
+            "field": [
+                {
+                    "name": "id",
+                    "type": "id"
+                },
+                {
+                    "name": "title",
+                    "type": "string",
+                    "size": 255,
+                    "allow_null": false
+                },
+                {
+                    "name": "date",
+                    "type": "string",
+                    "size": 32,
+                    "allow_null": false
+                },
+		{
+                    "name": "type",
+                    "type": "string",
+                    "size": 32,
+                    "allow_null": false
+                },
+		{
+                    "name": "desc",
+                    "type": "string",
+                    "size": 255,
+                    "allow_null": false
+                }
+            ]
+        }
+    ]
+}

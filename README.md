@@ -7,7 +7,7 @@ calendar.dfpkg - A zip archive containing everything needed to run the app. The 
 
 calendar - The directory for all source files required for the application.  Normally this will include all HTML, JavaScript, and CSS.
 
-calendar.zip - A zip archive of the src directory.  You can import this file from the Applications section of the admin app to update just the source code for your app.
+calendar.zip - A zip archive of the source code directory.  You can import this file from the Applications section of the admin app to update just the source code for your app.
 
 data.json - Sample table rows to be created when importing the app as a package file. This file is optional.
 

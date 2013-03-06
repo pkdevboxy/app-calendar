@@ -1,4 +1,4 @@
-calendar
+app-calendar
 ========
 
 A sample application showing how to make RESTful calls to your Document Services Platform (DSP). This app is installed automatically when you create a new DSP. It can be updated or deleted from the Applications tab in the admin app.

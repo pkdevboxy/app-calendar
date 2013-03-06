@@ -100,8 +100,8 @@
     <script src="/lib/web-core/js/mustache.js"></script>
     <script src="/lib/web-core/js/templates.js"></script>
     <!-- APP SPECIFIC LIBS -->
-
     <script src="js/actions.js"></script>
+    <script src="js/utils.js"></script>
 
     <script>
 
@@ -123,9 +123,8 @@ $.ajax({
 
                 //Do Something with response
             },
-            error: function(){
-                //handle error
-                alert(response.fault.faultString);
+            error:function (response) {
+                alertErr(response);
             }
         });
 </pre>
@@ -140,9 +139,8 @@ $.ajax({
             success:function () {
                 //refresh view
             },
-            error: function(){
-                //handle error
-                alert(response.fault.faultString);
+            error:function (response) {
+                alertErr(response);
             }
 </pre>
 <h3>Use Jquery to create records in the Events Database</h3>
@@ -158,10 +156,9 @@ var newRec = {"record":[{"title":title,"date":date, "type": type, "desc" : desc}
                 success:function (response) {
                    //update ui
                 },
-                error: function(){
-                //handle error
-                alert(response.fault.faultString);
-            }
+                error:function (response) {
+                    alertErr(response);
+                }
             });
 </pre>
 <h3>Use Jquery to update records in the Events Database</h3>
@@ -178,10 +175,9 @@ var newRec = {"record":[{"title":title,"date":date, "type": type, "desc" : desc}
                 success:function (response) {
                    //update ui
                 },
-                error: function(){
-                //handle error
-                alert(response.fault.faultString);
-            }
+                error:function (response) {
+                    alertErr(response);
+                 }
             });
 </pre>
 </body>

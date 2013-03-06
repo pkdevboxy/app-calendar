@@ -254,8 +254,8 @@ Actions = {
                 $('#id-edit').val(id);
                 $("#modal-edit").modal();
             },
-            error:function () {
-                alert(response.fault.faultString);
+            error:function (response) {
+                alertErr(response);
             }
 
         });
@@ -290,8 +290,8 @@ Actions = {
 
                 Actions.renderTime();
             },
-            error:function () {
-                alert(response.fault.faultString);
+            error:function (response) {
+                alertErr(response);
             }
 
         });
@@ -313,8 +313,8 @@ Actions = {
                 $("#modal-edit").modal('toggle');
                 Actions.getEvents(mm, yy);
             },
-            error:function () {
-                //alert(response.fault.faultString);
+            error:function (response) {
+                alertErr(response);
             }
 
         });
@@ -372,6 +372,9 @@ Actions = {
                     Actions.getEvents(mm, yy);
 
                     //Actions.renderTime();
+                },
+                error:function (response) {
+                    alertErr(response);
                 }
             });
         }

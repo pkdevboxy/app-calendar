@@ -77,7 +77,8 @@ Actions = {
 
 
         // Leap year
-        if (now.getYear() % 4 == 0) {
+        var nyr = now.getYear();
+        if ((nyr % 4 == 0 && nyr % 100 != 0) || nyr % 400 == 0) {
             n[1] = 29;
         }
 
@@ -129,8 +130,8 @@ Actions = {
                 dow = "0" + dow;
 
                 // Get last day of month
-                if (dow == n[mon.getDate()]) {
-                    last = n[mon.getDate()];
+                if (dow == n[mon.getMonth()]) {
+                    last = n[mon.getMonth()];
                 }
 
 

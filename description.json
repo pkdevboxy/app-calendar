@@ -1,1 +1,8 @@
-{"api_name":"calendar","name":"Calendar","description":"A sample html5 calendar application","is_active":1,"url":"/index.html","is_url_external":0,"schemas":"Events"}
+{
+	"api_name":"calendar",
+	"name":"Calendar",
+	"description":"A sample application showing how to perform CRUD operations on your DreamFactory Services Platform (DSP).",
+	"is_active":1,
+	"url":"/index.html",
+	"is_url_external":0
+}

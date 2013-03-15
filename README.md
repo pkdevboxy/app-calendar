@@ -1,7 +1,7 @@
 app-calendar
 ========
 
-A sample application showing how to make RESTful calls to your DreamFactory Services Platform (DSP). This app is installed automatically when you create a new DSP. It can be updated or deleted from the Applications tab in the admin app.
+A sample application showing how to make RESTful calls to your DreamFactory Services Platform (DSP). This app can be updated or deleted from the Applications tab in the admin app.
 
 calendar.dfpkg - A zip archive containing everything needed to run the app. The system uses this file to create the calendar app at startup. This file can also be imported directly into the Applications section of the admin app.  Importing a package file always creates a new app.  
 

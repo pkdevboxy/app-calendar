@@ -5,10 +5,14 @@
  * Time: 3:09 PM
  * To change this template use File | Settings | File Templates.
  */
-Actions = {
-
+var actions = function(){
+    $(document).ready(function () {
+        var today = new Date();
+        Actions.getEvents(today.getMonth(), today.getFullYear());
+        prettyPrint();
+    });
     // Render the Calendar
-    "renderCalendar":function (mm, yy) {
+    this.renderCalendar =function (mm, yy) {
 
 
         // HTML renderers
@@ -206,7 +210,7 @@ Actions = {
 
 
     // Render Clock
-    "renderTime":function () {
+    this.renderTime =function () {
         var now = new Date();
 
         var tt = "AM";
@@ -228,7 +232,7 @@ Actions = {
 
         setTimeout(doit, 500);
     },
-    promptForNewDate:function (date) {
+    this.promptForNewDate =function (date) {
         $('#form_title').val('').removeClass("required").attr("placeholder", "Enter a Title").focus();
         $("#modal").modal();
         $('#form_date').val(date);
@@ -239,7 +243,7 @@ Actions = {
 
 
     },
-    promptForEdit:function (id) {
+    this.promptForEdit= function (id) {
         $.ajax({
             dataType:'json',
             url:'http://' + location.host + '/rest/db/Events',
@@ -263,18 +267,10 @@ Actions = {
 
 
     },
-    promptForDelete:function (id, title) {
+    this.promptForDelete=function (id, title) {
         $("#modal-delete").modal();
     },
-    doLayout:function () {
-
-        $(document).ready(function () {
-            var today = new Date();
-            Actions.getEvents(today.getMonth(), today.getFullYear());
-            prettyPrint();
-        });
-    },
-    getEvents:function (month, year) {
+    this.getEvents=function (month, year) {
         $.ajax({
             dataType:'json',
             url:'http://' + location.host + '/rest/db/Events',
@@ -299,7 +295,7 @@ Actions = {
 
     },
 
-    deleteEvent:function (id, date) {
+    this.deleteEvent=function (id, date) {
         $.ajax({
             dataType:'json',
             type:"POST",
@@ -321,7 +317,7 @@ Actions = {
         });
 
     },
-    addEvent:function (title, date, type, desc, id) {
+    this.addEvent=function (title, date, type, desc, id) {
         if (!title) {
             $("#form_title").addClass('required').attr("placeholder", "this is a required field");
         } else {
@@ -386,4 +382,4 @@ Actions = {
 
 };
 
-Actions.doLayout();
+

@@ -246,8 +246,8 @@ var actions = function(){
     this.promptForEdit= function (id) {
         $.ajax({
             dataType:'json',
-            url:'http://' + location.host + '/rest/db/Events',
-            data:'app_name=Calendar&method=GET&filter=id=' + id,
+            url:location.protocol + '//' + location.host + '/rest/db/Events',
+            data:'app_name=Calendar&filter=id=' + id,
             cache:false,
             success:function (response) {
                 $('input:radio[name=color]:checked').val("success");
@@ -273,8 +273,8 @@ var actions = function(){
     this.getEvents=function (month, year) {
         $.ajax({
             dataType:'json',
-            url:'http://' + location.host + '/rest/db/Events',
-            data:'app_name=Calendar&method=GET',
+            url:location.protocol + '//' + location.host + '/rest/db/Events',
+            data:'app_name=Calendar',
             cache:false,
             success:function (response) {
 
@@ -298,8 +298,8 @@ var actions = function(){
     this.deleteEvent=function (id, date) {
         $.ajax({
             dataType:'json',
-            type:"POST",
-            url:'http://' + location.host + '/rest/db/Events/' + id + '?app_name=Calendar&method=DELETE',
+            type:"DELETE",
+            url:location.protocol + '//' + location.host + '/rest/db/Events/' + id + '?app_name=Calendar',
             cache:false,
             processData:false,
             success:function () {
@@ -349,8 +349,8 @@ var actions = function(){
             }
             $.ajax({
                 dataType:'json',
-                type:"POST",
-                url:'http://' + location.host + '/rest/db/Events?app_name=calendar&method=' + method,
+                type:method,
+                url:location.protocol + '//' + location.host + '/rest/db/Events?app_name=calendar',
                 data:JSON.stringify(newRec),
                 cache:false,
                 processData:false,

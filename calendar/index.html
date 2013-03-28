@@ -67,8 +67,8 @@
 </div>
     <div class="container">
 
-        <div class="row">
-            <div class="span12 offset2">
+        <div>
+            <div>
 
                 <h1 class="year"></h1>
 
@@ -109,8 +109,8 @@
 <pre class="prettyprint">
 $.ajax({
             dataType:'json',
-            url:location.protocol + '//' + location.host + '/rest/db/Events',
-            data:'app_name=Calendar',
+            url:'http://' + location.host + '/rest/db/Events',
+            data:'app_name=Calendar&method=GET',
             cache:false,
             success:function (response) {
 
@@ -125,8 +125,8 @@ $.ajax({
 <pre class="prettyprint">
 $.ajax({
             dataType:'json',
-            type: "DELETE",
-            url:location.protocol + '//' + location.host + '/rest/db/Events/' + id + '?app_name=Calendar',
+            type: "POST",
+            url:'http://' + location.host + '/rest/db/Events/' + id + '?app_name=Calendar&method=DELETE',
             cache:false,
             processData: false,
             success:function () {
@@ -142,7 +142,7 @@ var newRec = {"record":[{"title":title,"date":date, "type": type, "desc" : desc}
                 $.ajax({
                 dataType:'json',
                 type : "POST",
-                url:location.protocol + '//' + location.host + '/rest/db/Events?app_name=calendar',
+                url:'http://' + location.host + '/rest/db/Events?app_name=calendar&method=POST',
                 data:JSON.stringify(newRec),
                 cache:false,
                 processData: false,
@@ -160,8 +160,8 @@ var newRec = {"record":[{"title":title,"date":date, "type": type, "desc" : desc}
  var newRec = {"record":[{"id":id,"title":title,"date":date, "type": type, "desc" : desc}]};
                 $.ajax({
                 dataType:'json',
-                type : "MERGE",
-                url:location.protocol + '//' + location.host + '/rest/db/Events?app_name=calendar',
+                type : "POST",
+                url:'http://' + location.host + '/rest/db/Events?app_name=calendar&method=MERGE',
                 data:JSON.stringify(newRec),
                 cache:false,
                 processData: false,
@@ -171,6 +171,10 @@ var newRec = {"record":[{"title":title,"date":date, "type": type, "desc" : desc}
                 error:function (response) {
                     alertErr(response);
                  }
+            });
+</pre>
+</body>
+</html>        }
             });
 </pre>
 </body>

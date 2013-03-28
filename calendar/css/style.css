@@ -190,9 +190,11 @@ body {
     color: #404040;
 }
 .container {
-    width: 940px;
+    width: 700px;
+    display: block;
     margin-left: auto;
     margin-right: auto;
+
     zoom: 1;
 }
 .container:before, .container:after {
@@ -342,7 +344,7 @@ a:hover {
     margin-left: 80px;
 }
 .row > .offset2 {
-    margin-left: 140px;
+    margin-left: 20px;
 }
 .row > .offset3 {
     margin-left: 200px;
@@ -2173,8 +2175,8 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
     opacity: 0.8;
 }
 .modal {
-    position: fixed;
-    top: 50%;
+    position: absolute;
+    top: 300px;
     left: 50%;
     z-index: 11000;
     width: 560px;

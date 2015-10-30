@@ -1,5 +1,7 @@
 app-calendar
-========
+============
+
+#####This app only works with DreamFactory 1.X. It will not work with DreamFactory 2.0 or later.
 
 A sample application showing how to perform CRUD operations on your DreamFactory Services Platform (DSP). This app can be updated or deleted from the Applications tab in the admin app.
 
